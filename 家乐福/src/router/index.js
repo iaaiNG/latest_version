@@ -9,6 +9,6 @@ export default new Router({
   routes: [
     { path: '/', component: Main, meta: { keepAlive: true } },
     { path: '/index', component: Main, meta: { keepAlive: true } },
-    { path: '/detail/:id', component: Detail, meta: { keepAlive: true } }
+    { path: '/detail/:id', component: Detail, meta: { keepAlive: false } }
   ]
 })

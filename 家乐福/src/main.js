@@ -11,7 +11,7 @@ import './assets/css/index.css'
 import './assets/css/main.css'
 
 Vue.use(VueResource)
-Vue.use(ba,'bf1b710a3eb22657d01d834a43e4565f')
+Vue.use(ba,'bf1b710a3eb22657d01d834a43e4565f')  //百度统计插件
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

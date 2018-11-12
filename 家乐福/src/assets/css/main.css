@@ -21,13 +21,16 @@
     background-repeat: no-repeat
 }
 
-.bg-1 {
-    height: 4.9rem;
-    background-image: url(../img/a_1.jpg)
+.bg-1 img{
+    /* height: 4.9rem;
+    background-image: url(../img/a_1.png) */
+    width: 100%;
+    display: block;
 }
 
-.bg-2 {
+.bg-2, .bg-1{
     background-color: #E9E3D0;
+
 }
 .foods{
     width: 9.6rem;
@@ -36,14 +39,18 @@
     display: block;
     width: 4.7rem;
     height: 4.5rem;
-    margin-bottom: .2rem;
+    
+}
+.foods a:nth-child(1){
+    margin-bottom: .15rem;
 }
 .foods a img{
     width: 100%;
     height: 100%;
+    display: block;
 }
 .bg-3 {
-    height: 10.3rem;
+    height: 7.945rem;
     background-image: url(../img/a_2.jpg)
 }
 .bg-3::before{
@@ -53,7 +60,7 @@
 .apps{
     width: 9rem;
     /* background: rgba(123,66,99,.5); */
-    margin-top: 4.5rem;
+    margin-top: 2.8rem;
 }
 .apps a{
     display: block;
@@ -65,7 +72,7 @@
 }
 .apps a img{
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .foodsDetail{

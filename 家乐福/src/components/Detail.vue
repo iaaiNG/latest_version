@@ -1,18 +1,22 @@
 <template>
-  <div class="container">
+  <div class="container" v-track-pageview="{pageURL:'/detail/'+$route.params.id}">
     <div>
       <img :src="data.banner_pic_1" alt="">
     </div>
     <div>
       <img :src="data.banner_pic_2" alt="">
     </div>
-    <div>
+    <div class="app">
       <img src="../assets/img/detail/a_3.jpg" alt="">
       <div class="button-body">
-            <a :href="data.app_url_1" class="link-button"><img :src="data.app_pic_1" alt=""></a>
-            <a :href="data.app_url_2" class="link-button"><img :src="data.app_pic_2" alt=""></a>
-            <a :href="data.app_url_3" class="link-button"><img :src="data.app_pic_3" alt=""></a>
-            <a :href="data.app_url_4" class="link-button"><img :src="data.app_pic_4" alt=""></a>
+            <a v-track-event="{category:data.name+'_点击购买', action:'click',opt_label: 'app_1'}"
+              :href="data.app_url_1" class="link-button"><img :src="data.app_pic_1" alt=""></a>
+            <a v-track-event="{category:data.name+'_点击购买', action:'click',opt_label: 'app_2'}"
+             :href="data.app_url_2" class="link-button"><img :src="data.app_pic_2" alt=""></a>
+            <a v-track-event="{category:data.name+'_点击购买', action:'click',opt_label: 'app_3'}"
+             :href="data.app_url_3" class="link-button"><img :src="data.app_pic_3" alt=""></a>
+            <a v-track-event="{category:data.name+'_点击购买', action:'click',opt_label: 'app_4'}"
+             :href="data.app_url_4" class="link-button"><img :src="data.app_pic_4" alt=""></a>
         </div>
     </div>
     <div>
@@ -23,8 +27,8 @@
 </template>
 
 <script>
+
 export default {
-  name: 'HelloWorld',
   data () {
     return {
       data : []
@@ -41,8 +45,8 @@ export default {
       });
     }
   },
-  activated(){
-    window.scrollTo(0,0)
+  created(){
+    // window.scrollTo(0,0)
     this.pagerLoad()
   }
 }
@@ -54,6 +58,9 @@ export default {
   width: 100%;
   display: block;
 }
+.app{
+  position: relative;
+}
 .button-body {
     position: absolute;
     display: -webkit-box;
@@ -64,7 +71,7 @@ export default {
     justify-content: space-between;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    top: 20.8rem;
+    top: 1.9rem;
     left: 0;
     right: 0;
     width: 6.1rem;

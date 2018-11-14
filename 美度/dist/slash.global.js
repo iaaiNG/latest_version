@@ -40,6 +40,7 @@
               _this.animate({top: '-100%'});
               stm_clicki('send', 'pageview', {'page': nowPage, 'title': '第'+nowPage+'页'});
               stm_clicki('send', 'event', prevPage+'到'+nowPage, '上滑');
+              _hmt.push(['_trackPageview', '/p'+prevPage+'到p'+nowPage]);
             }
           },
           swipeDown: function () {
@@ -56,6 +57,7 @@
               _this.next().animate({top: '0'});
               stm_clicki('send', 'pageview', {'page': nowPage, 'title': '第'+nowPage+'页'});
               stm_clicki('send', 'event', prevPage+'到'+nowPage, '下滑');
+              _hmt.push(['_trackPageview', '/p'+prevPage+'到p'+nowPage]);
             }
           },
         });
@@ -73,11 +75,13 @@
             nowPage = arr[up][1] ; prevPage = arr[up][0]
             stm_clicki('send', 'pageview', {'page': nowPage, 'title': '第'+nowPage+'页'});
             stm_clicki('send', 'event', prevPage+'到'+nowPage, '横滑');
+            _hmt.push(['_trackPageview', '/p'+prevPage+'到p'+nowPage]);
           } else if (nowPage > 1) {
             page['p' + up] = 0
             nowPage = arr[up][0] ; prevPage = arr[up][1]
             stm_clicki('send', 'pageview', {'page': nowPage, 'title': '第'+nowPage+'页'});
             stm_clicki('send', 'event', prevPage+'到'+nowPage, '横滑');
+            _hmt.push(['_trackPageview', '/p'+prevPage+'到p'+nowPage]);
           }
         }
       }

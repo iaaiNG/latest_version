@@ -1,2 +1,2 @@
 # latest_version
-person project
+Private project

@@ -1,3 +1,18 @@
+.module{
+    position: fixed;
+    left: 50%;
+    top:50%;
+    margin-top:-1rem;
+    width: 6rem;
+    height: 1.5rem;
+    margin-left: -3rem;
+    background: rgba(0,0,0,0.5);
+    border-radius: .5rem;
+    color:white;
+    z-index: 20;
+    text-align: center;
+    line-height: 1.5rem
+}
 .code-img {
     display: block;
     width: 10rem
@@ -50,8 +65,9 @@
     display: block;
 }
 .bg-3 {
-    height: 7.945rem;
-    background-image: url(../img/a_2.jpg)
+    height: 7.13rem;
+    background-image: url(../img/a_2.jpg);
+    position: relative;
 }
 .bg-3::before{
     content: '';
@@ -60,24 +76,27 @@
 .apps{
     width: 9rem;
     /* background: rgba(123,66,99,.5); */
-    margin-top: 2.8rem;
+    margin-top: 3rem;
 }
-.apps a{
+.new-img{
+    font-size: 0; 
+}
+.new-img img{
+    width: 100%;
+}
+.apps .apps-btn{
     display: block;
     width: 2rem;
     height: 2.7rem;
-    /* background-image: url(../img/logo_1.png); */
-    /* background-size: cover;
-    background-repeat: no-repeat; */
 }
 .apps a img{
     width: 100%;
-    /* height: 100%; */
 }
 
 .foodsDetail{
     background-color: #FEFAF7;
     padding-bottom: 1rem
+    
 }
 .foodsDetail>div{
     position: absolute;
